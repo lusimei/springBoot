@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link  rel="stylesheet" th:href="@{login.css}">
+    <title>Title</title>
+</head>
+<body>
+    <h3>欢迎页面 hello world</h3>
+    <p id="name" th:text="${name}"></p>
+    <input th:value="${age}">
+    <p th:text="${user.email}"></p>
+    <input th:value="${user.address}">
+    <div th:utext="${html}"></div>
+    <ul>
+        <li th:each="item:${list}" th:text="${item}"></li>
+    </ul>
+</body>
+</html>
