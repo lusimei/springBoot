@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class PageController {
 
     @RequestMapping("/login")
-    public String index(Model model){
+    public String login(Model model){
         model.addAttribute("name","shimei");
         model.addAttribute("age",24);
         model.addAttribute("user",new User("@163.com","武汉"));
@@ -19,4 +19,14 @@ public class PageController {
         model.addAttribute("list", Arrays.asList(12,13,14));
         return "login";
     }
+
+//    @RequestMapping("/index")
+//    public String index(Model model){
+//        model.addAttribute("name","shimei");
+//        model.addAttribute("age",24);
+//        model.addAttribute("user",new User("@163.com","武汉"));
+//        model.addAttribute("html","<h5 style='color: aqua'>测试</h5>");
+//        model.addAttribute("list", Arrays.asList(12,13,14));
+//        return "login";
+//    }
 }
