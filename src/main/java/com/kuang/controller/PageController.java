@@ -5,13 +5,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Arrays;
 
 @Controller
 public class PageController {
 
     @RequestMapping("/login")
-    public String login(Model model){
+    public String login(Model model, HttpSession session){
+        session.setAttribute("username","chad");
         model.addAttribute("name","shimei");
         model.addAttribute("age",24);
         model.addAttribute("user",new User("@163.com","武汉"));

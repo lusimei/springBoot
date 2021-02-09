@@ -15,5 +15,15 @@
     <ul>
         <li th:each="item:${list}" th:text="${item}"></li>
     </ul>
+    <span th:text="#{login.name}"></span>
+    <input th:placeholder="#{login.name}">
+    <span th:text="#{login.pwd}"></span>
+    <input th:placeholder="#{login.pwd}">
+    <a th:href="@{/login?lang=zh-CN}">中文</a>
+    <a th:href="@{/login?lang=en-US}">英文</a>
+
+    <a th:href="@{/index}">跳转到主页</a>
+    <p th:text="${msg}" th:if="not ${#strings.isEmpty(msg)}"></p>
+    <p th:text="${session.username}" th:if="not ${#strings.isEmpty(session.username)}"></p>
 </body>
 </html>
